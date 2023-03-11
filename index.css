@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+} */
+
+.popup {
+  width: 350px;
+}
+.popup :where(.picker, header, .color, .all-colors) {
+  display: flex;
+  text-align: center;
+}
+.popup .picker {
+  background-color: #e3f2fd;
+  padding: 30px 0;
+  justify-content: center;
+}
+
+.picker #color-picker {
+  background-color: #5372f0;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.picked-colors {
+  margin: 10px 15px;
+}
+
+.picked-colors.hide {
+  display: none;
+}
+.picked-colors header {
+  justify-content: space-between;
+}
+
+.picked-colors .clear-all {
+  color: #5372f0;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.all-colors {
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.all-colors .color {
+  cursor: pointer;
+  align-items: center;
+  width: calc(100% / 3);
+  margin-bottom: 10px;
+}
+.all-colors .color .rect {
+  display: block;
+  height: 22px;
+  width: 22px;
+  border-radius: 5px;
+  background-color: #5372f0;
+  margin-right: 8px;
+}
+
+.all-colors .color .value {
+  font-size: 0.96rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
